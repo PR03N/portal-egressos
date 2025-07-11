@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Site da Pró-Reitoria de Ensino de Graduação da Universidade Federal de São João del-Rei (PROEN UFSJ)">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.6.1/dist/core.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.6.1/dist/core.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+	<script type="module" src="./assets/js/script.js" defer></script>
+	<link rel="shortcut icon" href="https://ufsj.edu.br/temaversao5/imagens/ufsj-favicon.png" type="image/png">
+	<title>UFSJ | Universidade Federal de São João del-Rei</title>
+</head>
+
+<body>
+
+	<header class="br-header large" data-sticky="data-sticky">
+		<div class="container-fluid">
+			<div class="header-bottom d-flex align-items-center">
+				<div class="header-menu">
+					<div class="header-menu-trigger">
+						<button id="menu-toggle" class="br-button small circle" type="button" aria-label="Menu"
+							data-toggle="menu" data-target="#main-navigation"><i class="fas fa-times"
+								aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="header-info">
+						<a href="./index.html" class="header-title">Pró-Reitoria de Ensino de Graduação</a>
+						<div class="header-subtitle">Universidade Federal de São João del-Rei</div>
+					</div>
+				</div>
+				<div class="logos-container d-flex">
+					<a href="./index.html"><img class="m-0" width="90" src="./assets/images/logo_proen.png"
+							alt="Logo PROEN"></a>
+					<a href="./index.html"><img class="m-0" width="110" src="./assets/images/logo_ufsj.png"
+							alt="Logo UFSJ"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="d-flex flex-fill p-5" id="main">
+		<div class="container-fluid d-flex">
+			<div class="row flex-fill">
+				<div class="br-menu push active col-sm-4 col-lg-3 px-0" id="main-navigation">
+					<div class="menu-container">
+						<div class="menu-panel">
+							<div class="menu-header">
+								<div class="menu-title">
+									<img src="./assets/images/govbr.svg" alt="Logo govbr">
+									<span>Pró-Reitoria de Ensino de Graduação</span>
+								</div>
+								<div class="menu-close">
+									<button class="br-button circle" type="button" aria-label="Fechar o menu"
+										data-dismiss="menu">
+										<i class="fas fa-times" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+							<nav class="menu-body" role="tree">
+								<a class="menu-item divider" href="./index.html">
+									<span class="icon">
+										<i class="fas fa-graduation-cap" aria-hidden="true"></i>
+									</span>
+									<span class="content">Dados abertos</span>
+								</a>
+								<a class="menu-item divider" href="./assets/pages/egressos_cadastrados.html">
+									<span class="icon">
+										<i class="fas fa-graduation-cap" aria-hidden="true"></i>
+									</span>
+									<span class="content">Egressos Cadastrados</span>
+								</a>
+							</nav>
+							<div class="menu-footer" data-visible="true">
+								<div class="menu-links d-flex flex-column pl-3">
+									<a target="_blank" href="https://ufsj.edu.br/copeve/">
+										<span class="mr-1">COPEVE</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="http://dibib.ufsj.edu.br/wordpress/">
+										<span class="mr-1">DIBIB</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="https://ufsj.edu.br/dicon/">
+										<span class="mr-1">DICON</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="https://ufsj.edu.br/seaca/">
+										<span class="mr-1">SEACA</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="https://ufsj.edu.br/serle/">
+										<span class="mr-1">SERLE</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="https://ufsj.edu.br/sesta/">
+										<span class="mr-1">SESTA</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+									<a target="_blank" href="https://ufsj.edu.br/setec/">
+										<span class="mr-1">SETEC</span>
+										<i class="fas fa-external-link-square-alt" aria-hidden="true"></i>
+									</a>
+								</div>
+								<div class="social-network">
+									<div class="social-network-title">Redes Sociais</div>
+									<div class="d-flex">
+										<a class="br-button circle" href="https://www.facebook.com/proenufsj/"
+											target="_blank" aria-label="Facebook da PROEN">
+											<i class="fab fa-facebook-f" aria-hidden="true"></i>
+										</a>
+										<a class="br-button circle" href="https://www.instagram.com/proenufsj/"
+											aria-label="Instagram da PROEN" target="_blank">
+											<i class="fab fa-instagram" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+								<div class="menu-info">
+									<div class="text-center text-down-01">Todo o conteúdo deste site está
+										publicado sob a licença <strong>Creative Commons
+											Atribuição-SemDerivações 3.0</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
+					</div>
+				</div>
+				<div class="col-9">
+					<div class="main-content d-flex flex-column pl-3 mt-4">
+						<h1>Portal de Egressos</h1>
+						<iframe class="power-bi-iframe" title="PowerBI - Egressos"
+							src="https://app.powerbi.com/view?r=eyJrIjoiZDk0ZGVkOGMtNDkzZi00YzI5LWFmNDYtZTFkYzYyMjk1NmNiIiwidCI6ImU0ZGM5MDgwLTRjZDYtNDZlOS1iN2U1LWNiZWM1YzUxMjBjZiJ9"
+							frameborder="0" allowFullScreen="true">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="br-footer inverted">
+		<div class="container-lg">
+			<div class="logo text-sm-left" inverted="inverted">
+				<img src="./assets/images/govbr.svg" alt="Logo govbr">
+			</div>
+			<div class="br-list horizontal justify-content-center" data-toggle="data-toggle" data-sub="data-sub">
+				<div class="col-2">
+					<a class="br-item" href="./index.html">
+						<div class="content">Dados Abertos</div>
+					</a>
+				</div>
+				<div class="col-2">
+					<a class="br-item" href="./assets/pages/egressos_cadastrados.html">
+						<div class="content">Egressos Cadastrados</div>
+					</a>
+				</div>
+			</div>
+			<div class="d-none d-sm-block">
+				<div class="row align-items-end justify-content-between py-5">
+					<div class="col">
+						<div class="social-network">
+							<div class="social-network-title">Redes Sociais</div>
+							<div class="d-flex">
+								<a class="br-button circle" href="https://www.facebook.com/proenufsj/" target="_blank"
+									aria-label="Facebook da PROEN">
+									<i class="fab fa-facebook-f" aria-hidden="true"></i>
+								</a>
+								<a class="br-button circle" href="https://www.instagram.com/proenufsj/"
+									aria-label="Instagram da PROEN">
+									<i class="fab fa-instagram" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="br-divider my-3"></span>
+		<div class="container-lg">
+			<div class="info">
+				<div class="text-down-01 text-medium text-center pb-3">
+					© Universidade Federal de João del-Rei.&nbsp;<strong>Todos os direitos reservados</strong>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
